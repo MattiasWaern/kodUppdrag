@@ -1,4 +1,72 @@
-h1{
-    font-size: 200px;
-    color: purple;
+.body{
+    font-family: 'Courier New', Courier, monospace;
 }
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+
+details {
+    border-top: 1px solid #ddd;
+}
+
+
+details:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+
+summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #00205b;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.icon {
+    font-size: 30px;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+details[open] .icon {
+    transform: rotate(45deg);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-bottom: 25px;
+    color: #00205b;
+}
+
+
+
+.content h3 {
+    margin: 0 0 5px;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+
+.content p {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.5;
+}
+
