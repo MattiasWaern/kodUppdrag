@@ -13,13 +13,10 @@
 
 .summary {
     cursor: pointer;
-
     padding: 20px 0;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     color: #00205b;
     font-size: 22px;
     font-weight: 700;
@@ -28,7 +25,6 @@
 .icon {
     font-size: 30px;
     font-weight: 300;
-
     transition: transform 0.3s ease;
 }
 
@@ -37,17 +33,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-
     max-height: 0;
     overflow: hidden;
-
     padding-bottom: 0;
-
     color: #00205b;
-
     opacity: 0;
     transform: translateY(-10px);
-
     transition:
         max-height 0.4s ease,
         opacity 0.3s ease,
@@ -59,7 +50,6 @@
 input:checked ~ .content {
     max-height: 1000px;
     padding-bottom: 25px;
-
     opacity: 1;
     transform: translateY(0);
 }
