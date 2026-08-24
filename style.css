@@ -1,5 +1,5 @@
-.body{
-    font-family: 'Courier New', Courier, monospace;
+html {
+    interpolate-size: allow-keywords;
 }
 
 .container {
@@ -7,16 +7,20 @@
     margin: 0 auto;
 }
 
-
 details {
     border-top: 1px solid #ddd;
+    overflow: hidden;
+    transition: height 0.4s ease-out;
+    height: auto;
 }
 
+details:not([open]) {
+    height: 66px;
+}
 
 details:last-child {
     border-bottom: 1px solid #ddd;
 }
-
 
 summary {
     list-style: none;
@@ -50,23 +54,31 @@ details[open] .icon {
     gap: 30px;
     padding-bottom: 25px;
     color: #00205b;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, display 0.3s;
 }
 
+details[open] .content {
+    opacity: 1;
+    transform: translateY(0);
+}
 
+@starting-style {
+    details[open] .content {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
 
 .content h3 {
     margin: 0 0 5px;
-
     font-size: 15px;
     font-weight: 700;
 }
 
-
-
 .content p {
     margin: 0;
-
     font-size: 15px;
     line-height: 1.5;
 }
-
