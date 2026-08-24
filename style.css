@@ -37,12 +37,8 @@
     overflow: hidden;
     padding-bottom: 0;
     color: #00205b;
-    opacity: 0;
-    transform: translateY(-10px);
     transition:
         max-height 0.4s ease,
-        opacity 0.3s ease,
-        transform 0.3s ease,
         padding 0.4s ease;
 }
 
