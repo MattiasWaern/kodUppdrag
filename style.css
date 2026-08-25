@@ -28,33 +28,33 @@
     transition: transform 0.3s ease;
 }
 
-
-.content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-height: 0;
-    overflow: hidden;
-    padding-bottom: 0;
-    color: #00205b;
-    transition:
-        max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-        padding 0.5s ease,
-        opacity 0.4s ease,
-        transform 0.4s ease;
-}
-
-
-input:checked ~ .content {
-    max-height: 1000px;
-    padding-bottom: 25px;
-}
-
-
 input:checked + .summary .icon {
     transform: rotate(45deg);
 }
 
+.content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    color: #00205b;
+}
+
+input:checked ~ .content {
+    grid-template-rows: 1fr;
+}
+
+.content-inner {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-bottom: 0;
+    transition: padding-bottom 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+input:checked ~ .content .content-inner {
+    padding-bottom: 30px;
+}
 
 .content h3 {
     margin: 0 0 5px;
