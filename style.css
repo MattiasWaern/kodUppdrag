@@ -38,16 +38,16 @@
     padding-bottom: 0;
     color: #00205b;
     transition:
-        max-height 0.3s ease,
-        padding 0.3s ease;
+        max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        padding 0.5s ease,
+        opacity 0.4s ease,
+        transform 0.4s ease;
 }
 
 
 input:checked ~ .content {
     max-height: 1000px;
     padding-bottom: 25px;
-    opacity: 1;
-    transform: translateY(0);
 }
 
 
